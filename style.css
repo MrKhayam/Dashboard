@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+
+.bodyTop {
+    background-color: #4BAF4F;
+    padding: 20px;
+    width: 100%;
+    height: 8%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bodyTop i {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.bodyTop h5 {
+    margin: 0;
+}
+
+
+.bodyBottom {
+    width: 100%;
+    height: 92%;
+    position: relative;
+}
+
+.bottomLeft {
+    height: 100%;
+    width: 70px;
+    background-color: #fff;
+    transition: all .3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    z-index: 999;
+}
+
+
+
+.sidebar {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.userIcon {
+    background-color: #9E9E9E;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sidebarIcon {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.chart {
+    color: #4BAF4F;
+}
+
+.case {
+    color: #EC407A;
+}
+
+.cart {
+    color: #039BE5;
+}
+
+.card {
+    color: #009688;
+}
+
+.users {
+    color: #5C6BC0;
+}
+
+.puzzle {
+    color: #8D6E63;
+}
+
+.gear {
+    color: #607D8B;
+}
+
+.help {
+    color: #039BE5;
+}
+
+
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.bottomRight {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.rightLeft {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+}
+
+.rightRight {
+    width: calc(100% - 70px);
+    height: 100%;
+    background-color: #F2F2F2;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+
+.rightConTop {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.innerRightCon{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        background-color: white;
+}
+
+.innerRightCon1 {
+    width: 300px;
+    height: 40px;
+}
+
+i {
+    cursor: pointer;
+}
+
+
+
+
+
+.salesSummary {
+    min-height: 500px;
+    background-color: white;
+}
+
+.summaryTop{
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    display: flex;
+    min-height: 120px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    border-bottom: 1px solid #dadada;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.innerSumTop{
+    width: 250px;
+    height: 120px;
+    flex-direction: column;
+}
+
+.innerSumTop:hover{
+    background-color: #dadada;
+    cursor: pointer;
+}
+
+.sumHead{
+    width: 100%;
+}
+
+.rightDropDown{
+    border-bottom: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+.outerTimeline{
+    margin-top: 80px;
+}
+
+
+.timeline {
+    position: relative;
+    height: 5px;
+    background-color: #8dc63f;
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dot {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    background-color: #8dc63f;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot:hover::after {
+    content: attr(data-date);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+
+
+.dates-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 10px 0;
+    overflow-x: auto;
+    padding: 18px;
+    white-space: nowrap;
+    border-top: 1px solid #dadada;
+    margin-top: 37px;
+}
+
+.date-label {
+    font-size: 12px;
+    color: #333;
+    transform: rotate(-45deg);
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .date-label {
+        font-size: 11px;
+        min-width: 35px;
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-label {
+        font-size: 10px;
+        min-width: 30px;
+        margin: 0 2px;
+    }
+}
+
+
+
+
+/* Below Sales Container  */
+
+
+
+
+.belowSalesSum {
+    min-height: 500px;
+    background-color: white;
+}
+
+.bssTop{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bssTop i{
+    font-size: 25px;
+}
+
+
+.bssCen{
+    width: 100%;
+    min-height: 70%;
+    overflow-x: auto;
+}
+
+
+.bssCenTop{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.bssCenTop ul{
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+}
+
+.bssCenTop ul li{
+    white-space: nowrap;
+}
+
+
+
+.bssCenCen{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 120px;
+    text-align: center;
+}
+
+
+.cenIconOut{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+}
+.cenIcon{
+    font-size: 50px;
+}
+
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+.salesByItems{
+    height: 340px;
+    background-color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+.sbiLeft{
+    padding: 13px;
+    width: 35%;
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
+.sbiLeftTop{
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.sbiRight{
+    padding: 13px;
+    width: 65%;
+    height: 100%;
+}
+
+.sbiRightCen{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sbiRightTop{
+    flex-wrap: wrap;
+}
+
+
+.sbiRightCenInner {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.receipts{
+    height: 130px;
+}
+
+.receiptIn{
+    width: 32%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.recIcon{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(9, 194, 9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recIcon i{
+    color: white;
+    font-size: 25px;
+}
+
+.receipt2 .recIcon {
+    background-color: #607D8B;
+}
+.receipt3 .recIcon {
+    background-color: #E91E63;
+}
+
+
+
+.itemCon {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.categoryCon {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.empCon{
+    min-height: 120px;
+    padding: 12px;
+    overflow: auto;
+    white-space: nowrap;
+}
+.empIcon{
+    font-size: 25px;
+}
+
+.iconInRole{
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #F39C12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .salesByItems{
+        flex-direction: column;
+    }
+    .sbiLeft{
+        height: auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .sbiRight{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .bottomLeft {
+        transform: translateX(-100%);
+    }
+
+    .clicked {
+        transform: translateX(0%);
+    }
+
+    .rightLeft {
+        width: 0%;
+    }
+
+    .rightRight {
+        width: 100%;
+    }
+    .itemCon{
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+    }
+    .categoryCon{
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+    }
+    .empCon{
+        width: 100%;
+    }
+
+}
