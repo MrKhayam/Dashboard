@@ -47,23 +47,62 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: absolute;
     z-index: 999;
-    transform: translateX(-100%);
 }
+
+
+.clicked{
+    width: 290px;
+}
+
+.clicked .tohid{
+    visibility: visible;
+    display: block;
+}
+
+
+.tohid{
+    visibility: hidden;
+    display: none;
+}
+
+
+
 
 
 
 .sidebar {
-    width: 70px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
 }
 
 .sidebar li {
     list-style: none;
+    width: 100%;
 }
+
+
+.sidebar li .liDrop{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.liDropIn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    font-size: 14px;
+}
+
+.tohidCus{
+    cursor: pointer;
+}
+
+
 
 .userIcon {
     background-color: #9E9E9E;
@@ -136,13 +175,13 @@ p,h1,h2,h3,h4,h5,h6{
 }
 
 .rightLeft {
-    width: 0px;
+    width: 70px;
     height: 100%;
     background-color: transparent;
 }
 
 .rightRight {
-    width: 100%;
+    width: calc(100% - 70px);
     height: 100%;
     background-color: #F2F2F2;
     padding: 20px;
